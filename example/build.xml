@@ -1,0 +1,19 @@
+<project default="all">
+
+    <path id="classpath">
+        <fileset dir="../bin/jar" includes="jeva.jar" />
+    </path>
+    
+	<target name="all" depends="compile"/>
+  
+    <target name="clean">
+        <delete dir="bin"/>
+    </target>
+
+    <target name="compile">
+        <mkdir dir="bin"/>
+        <javac srcdir="src" destdir="bin" classpathref="classpath"/>
+    </target>
+
+</project>
+

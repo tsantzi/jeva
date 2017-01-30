@@ -1,0 +1,20 @@
+<project default="all">
+
+	<target name="all" depends="compile, jar"/>
+  
+    <target name="clean">
+        <delete dir="bin"/>
+    </target>
+
+    <target name="compile">
+        <mkdir dir="bin/classes/jeva"/>
+        <javac srcdir="src" destdir="bin/classes/jeva"/>
+    </target>
+
+    <target name="jar">
+        <mkdir dir="bin/jar"/>
+        <jar destfile="bin/jar/jeva.jar" basedir="bin/classes/jeva"/>
+    </target>
+
+</project>
+
